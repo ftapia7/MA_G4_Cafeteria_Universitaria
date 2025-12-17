@@ -9,8 +9,8 @@ Requisitos
   
 Instalación
 - Clonar el repositorio:
-git clone https://github.com/tuusuario/cafeteria-menu.git
-cd cafeteria-menu
+git clone https://github.com/ftapia7/MA_G4_Cafeteria_Universitaria.git
+cd MA_G4_Cafeteria_Universitaria
 
 - Instalar las dependencias:
 npm install
