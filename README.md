@@ -1,3 +1,57 @@
+Este proyecto es una aplicación web construida con React, Vite y Firebase para gestionar pedidos de una cafetería. La aplicación ofrece dos vistas principales:
+- Vista de usuario: muestra el menú con carrito y permite confirmar pedidos.
+- Vista del personal: presenta una tabla de pedidos con acciones para actualizar su estado.
+  
+Requisitos
+- Node.js versión 18 o superior
+- npm 
+- Una cuenta de Firebase con Firestore habilitado
+  
+Instalación
+- Clonar el repositorio:
+git clone https://github.com/tuusuario/cafeteria-menu.git
+cd cafeteria-menu
+
+- Instalar las dependencias:
+npm install
+
+- Configurar Firebase:
+Crear un archivo src/firebase.js con la configuración del proyecto.
+
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "TU_API_KEY",
+  authDomain: "TU_AUTH_DOMAIN",
+  projectId: "TU_PROJECT_ID",
+  storageBucket: "TU_STORAGE_BUCKET",
+  messagingSenderId: "TU_MESSAGING_SENDER_ID",
+  appId: "TU_APP_ID",
+};
+
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+
+
+Ejecución en desarrollo
+Para iniciar el servidor de desarrollo:
+npm run dev
+
+
+La aplicación se abrirá en la dirección http://localhost:5173.
+
+
+Tema visual
+El proyecto incluye un archivo src/styles.css con un tema personalizado inspirado en una cafetería. Este tema define una paleta cálida con tonos marrón y crema, y estilos aplicados a la barra de navegación, las tarjetas, los botones y la tabla de pedidos.
+
+Funcionalidades principales
+- Menú interactivo con carrito y cálculo automático del total.
+- Confirmación de pedidos con hora programada.
+- Vista del personal con tabla de pedidos y actualización de estado (pendiente, preparado, entregado).
+- Integración con Firebase Firestore para persistencia en tiempo real.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
