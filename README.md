@@ -1,54 +1,16 @@
-# MA_G4_Cafeteria_Universitaria
-Incremento del Primer Sprint del Proyecto Final del Curso de Metodologias Agiles de Desarrollo
+# React + Vite
 
-Aplicación web construida con **React + Vite + Firebase** para gestionar pedidos de una cafetería.  
-Incluye dos vistas principales:
-- **Vista Usuario**: menú con carrito y confirmación de pedidos.
-- **Vista Personal**: tabla de pedidos con acciones para actualizar estado.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Requisitos
+Currently, two official plugins are available:
 
-- Node.js 
-- npm 
-- Cuenta de Firebase con Firestore habilitado
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
- Instalación
+## React Compiler
 
-1. Clonar este repositorio:
-   ```bash
-   git clone https://github.com/ftapia7/cafeteria-menu.git
-   cd cafeteria-menu
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-2. Instalar dependencias:
-   npm install
+## Expanding the ESLint configuration
 
-3. Configurar firebase: Crear un archivo src/firebase.js con configuración
-
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-
-const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE_BUCKET",
-  messagingSenderId: "TU_MESSAGING_SENDER_ID",
-  appId: "TU_APP_ID",
-};
-
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-
-
-4. Ejecutar
-   npm run dev (esto va a abrir la app en: https://localhost:5173)
-
-
-Tema Café: El proyecto incluye un archivo src/style.css con un tema café personalizado.
-- Estilos para navbar, tarjetas, botones y tabla de pedidos.
-  
-Funcionalidades: Menú interactivo con carrito y cálculo de total.
-- Confirmación de pedidos con hora programada.
-- Vista del personal con tabla de pedidos y actualización de estado (pendiente → preparado → entregado).
-- Integración con Firebase Firestore para persistencia en tiempo real.
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
